@@ -8,8 +8,19 @@ let items = [1..10]
 
 let r = List.append items [6]
 
-let prefix prefixStr baseStr =
-    prefixStr + ", " + baseStr
+let wrap by str: string =
+    by + str + by
 
-prefix "Hello" "Jeck"
+let names = ["Makr"; "Doe"; "Jane"]
 
+let aWrap = wrap "@"
+
+let doubleWrap = wrap "+" << wrap "-"
+
+let res = 
+    names
+    |> Seq.map aWrap
+    |> Seq.map (fun x -> printf "Mapped over %s \n" x; "xxx-" + x)
+    |> Seq.map (wrap "?" >> doubleWrap)
+
+res
