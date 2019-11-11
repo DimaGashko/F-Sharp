@@ -25,7 +25,14 @@ let res =
 
 res
 
-    
-["A"; "B"; "C"; "D"]
+"A"
+|> aWrap
+|> (wrap "***")
+
+["LoreLorem ipsum, dolor sit amet 
+consectetur adipisicing elit.
+Mollitia ullam eligendi asperiores 
+nobis itaque accusantium m"; "B"; "C"; "D"]
 |> Seq.filter (fun s -> s > "B")
 |> Seq.map (fun s -> s + s)
+
