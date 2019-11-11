@@ -24,3 +24,8 @@ let res =
     |> Seq.map (wrap "?" >> doubleWrap)
 
 res
+
+    
+["A"; "B"; "C"; "D"]
+|> Seq.filter (fun s -> s > "B")
+|> Seq.map (fun s -> s + s)
