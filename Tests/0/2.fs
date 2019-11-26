@@ -14,6 +14,5 @@ let rec countVowels = function
     [] -> 0
     | h::t when isVowels h -> 1 + countVowels t
     | _::t -> countVowels t
-    
 
 countVowels (List.ofSeq "aeiouyyy555oooo")
