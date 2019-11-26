@@ -16,3 +16,9 @@ let rec countVowels = function
     | _::t -> countVowels t
 
 countVowels (List.ofSeq "aeiouyyy555oooo")
+
+let test = function
+    | [x;_;_] when x = 1 -> 1
+    | _ -> 0
+
+test [1;2;3;4]
