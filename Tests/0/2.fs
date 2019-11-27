@@ -22,3 +22,10 @@ let test = function
     | _ -> 0
 
 test [1;2;3;4]
+
+let ff x =
+   let rec _ff x acc =
+      if x <= 1 then acc
+      else _ff (x - 1) (acc * x)
+ 
+   _ff x 1
