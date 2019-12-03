@@ -25,8 +25,3 @@ arcsin 0.0
 arcsin 0.5 
 arcsin -0.5
 arcsin 0.9
-
-asin 0.0
-asin 0.5 
-asin -0.5
-asin 0.9

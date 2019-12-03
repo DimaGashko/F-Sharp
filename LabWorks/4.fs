@@ -11,5 +11,5 @@ let sinCosGenRef (initialAngle: float) step =
    fun() -> (angle := !angle + step; (sin !angle, cos !angle))
 
 genlist 10 (sinCosGen 0.0 (System.Math.PI / 4.))
-   |> List.map (fun x -> sprintf "\t(%.3f,%.3f)\n" (fst x) (snd x))
+   |> List.map (fun x -> sprintf "\t(%.3f, %.3f)\n" (fst x) (snd x))
    |> List.reduce (+)
